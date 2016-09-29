@@ -4,19 +4,19 @@
 
 <h2>Structure of this project</h2>
 
-stat159-fall2016-project1/
+1.stat stat159-fall2016-project1
     - .gitignore
     - README.md
     - Makefile
-    - paper/
-        - sections/
+    - paper
+        - sections
             - 00-abstract.md
             - 01-introduction.md
             - 02-discussion.md
             - 03-conclusions.md
         - paper.md
         - paper.html
-    - images/
+    - images
         - git-logo.png
         - github-logo.png
         - markdown-logo.png

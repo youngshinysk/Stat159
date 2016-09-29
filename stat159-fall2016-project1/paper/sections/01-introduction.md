@@ -1,5 +1,5 @@
 
-<h1>Introduction</h1>
+<h1>[Introduction]</h1>
 
 ![stat159](../images/stat159-logo.png)
 

@@ -14,7 +14,6 @@ because I don't have to create a new paper.html by typing the long command
 everytime.  I can simply create a makefile with the command type 'make'
 to create the html.</p>
 
-<br><br>
 
 <h2>What is Git and Github</h2>
 
@@ -28,7 +27,6 @@ from Github to your local server.  Technically, you can use Git without Github, 
 manageable.  Github essentially makes Git easier to use. They are both important in this project, because I used these technologies to share my 
 project with my Professor and my GSI.</p>   
 
-<br><br>
 
 <h2>What is Markdown and pandoc</h2>
 
@@ -47,7 +45,6 @@ on your .md files.  Pandoc is useful, because it creates a neat report
 that integrates codes, writing, graphs, tables, etc.  And it can be done
 simply by calling the pandoc command on a Markdown file.</p>
 
-<br><br>
 
 <h2>What resources were used</h2>
 <p>Primary resources were the lectures and labs for Stat 159.  I found the 
@@ -55,7 +52,6 @@ labs particularly useful, because they included instructions with examples.
 Other useful resources include Youtube.  Youtube videos were useful, because
 it demonstrated the exact steps to doing a task by actually doing them on screen.</p>
 
-<br><br>
 
 <h2>What were the "easy" parts?</h2>
 <p>The easy parts of this project were Markdown and actually writing out the contents.
@@ -66,7 +62,6 @@ the markdown files were easier to create than figuring out how Git works and set
 up the project structure on Github, because it was my first time using a version control system
 to share my project.</p>
 
-<br><br>
 
 <h2>What were the challenging parts?</h2>
 <p>The challenging parts were Git, Github, and Makefile</p> 

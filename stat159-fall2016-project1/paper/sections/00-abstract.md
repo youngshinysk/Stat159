@@ -1,5 +1,5 @@
 
-<h1>Abstract</h1>
+<h1>[Abstract]</h1>
 
 <p>This paper is about the usage of computational tools commonly used for reproducible team projects.
 These tools include terminal (gitbash for windows), makefile, markdown (md), pandoc, git,
