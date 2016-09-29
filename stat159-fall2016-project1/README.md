@@ -3,7 +3,7 @@
 <h1>Youngshin Kim</h1>
 
 <h2>Structure of this project</h2>
-![shot](../../../../shot.png)
+![shot](../../../shot.png)
 
 1. Makefile automates the process of 
 	- combining the 4 md files into one md file (paper.md)
