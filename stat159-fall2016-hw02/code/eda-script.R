@@ -17,9 +17,17 @@ png(file = 'images/histogram-tv.png')
 hist(data$TV, xlab = 'TV (thousands of dollars)', main = 'Histogram for TV advertising budget')
 dev.off()
 
+pdf(file = 'images/histogram-tv.pdf')
+hist(data$TV, xlab = 'TV (thousands of dollars)', main = 'Histogram for TV advertising budget')
+dev.off()
+
 #histogram for Sales
 hist(data$Sales)
 
 png(file = 'images/histogram-sales.png')
+hist(data$Sales, xlab = 'Sales (thousands of unit)', main = 'Histogram for Sales')
+dev.off()
+
+pdf(file = 'images/histogram-sales.pdf')
 hist(data$Sales, xlab = 'Sales (thousands of unit)', main = 'Histogram for Sales')
 dev.off()
