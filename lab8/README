@@ -1,0 +1,13 @@
+Lab8 
+
+Youngshin Kim
+
+October 24, 2016
+
+
+
+For this lab, I used the shiny library to create an interactive webpage.
+The features of this website are dropdown list of the different predictors
+from the advertising data and the corresponding scatterplot with the 
+response variable, Sales.  To view different scatterplot, you simply
+need to scroll down the dropdown list.
