@@ -1,0 +1,7 @@
+Lab 9 
+Youngshin Kim
+
+This lab teaches us how to create a Rnw file to write report in Latex format.
+First, we created a new Rnw and basically transferred writing and code from Rmd
+to this Rnw file.  The syntax had to be changed.  Next, we knitted the Rnw
+file to PDF like we would do with Rmd.

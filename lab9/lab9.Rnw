@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+
+
+\title{Lab 9}
+\author{Youngshin Kim}
+\maketitle
+
+\begin{abstract}
+In this report, we aim to reproduce some of the results used in the book 
+"An Introduciton to Statistical Learning". To do this, we primarily use 
+R script files for reading/manipulating data and Makefile 
+to automate necessary conversion tasks.
+\end{abstract}
+
+\section{Introduction}
+
+From the main data set, Advertising, we use the data on TV marketing and Sales 
+to check if there is any significant relationship between the two variables.  
+We want to know how Sales changes when the amount of TV marketing changes.  
+This is not necessarily to check for causality, because correlation 
+doesn't mean causality all the times.
+
+\section{Data}
+
+The Advertising data consists of values on Sales (in thousands of unit) of 
+some product in 200 different markets and values on advertising budget 
+(in thousands of dollars) for three different kind of 
+marketing strategies: TV, Radio, Newspaper. For the purpose of this project, 
+we are just interested in the advertising budget for TV.
+
+\section{Methodology}
+
+We use simple linear model to model the relationship between TV and Sales.
+The response variable here is Sales and the predictor variable is TV.  
+The regression equation is Sales = Intercept + Coefficient * TV.
+With this equation in mind, we use the lm function in R to find the relevant
+information for our regression.  The syntax for this code is
+lm(Sales ~ TV, data = advertising) where object 'advertising' is the 
+main data from Advertising.csv.  The basic idea behind this function is 
+that we want to find the intercept and the regression coefficients that
+minize the residual sum of squares.
+
+\section{Results}
+
+When we compute the regression coefficients using lm function, we
+get the following summary statistics 
+
+<<echo=FALSE, results = tex>>=
+load('regression.RData')
+library(xtable)
+options(xtable.comment = FALSE)
+print(xtable(fit, caption = 'Regression Coefficients'))
+@
+
+Since the p-values of the intercept and the regression coefficient are close to zero,
+we have evidence that TV and Sales is positively correlated.  The beta coefficient for TV, however,
+is very small.  To be exact, it tells us that when TV advertising budget increase by one
+unit, we can expect to see an average increase in Sales by 0.05.  This is not too large.
+
+<<echo = FALSE,results = tex>>=
+rse = sqrt(deviance(fit)/df.residual(fit))
+rsquared = summary(fit)$r.squared
+fstat = summary(fit)$fstatistic['value']
+
+table2 = matrix(c(rse, rsquared, fstat), ncol = 1)
+colnames(table2) = 'Value'
+rownames(table2) = c('RSS', 'R^2', 'F-statistic')
+table2 = as.table(table2)
+print(xtable(table2, caption = 'Values extracted from lm function summary'))
+@
+
+
+This is the scatterplot with regression line fitted to the plot.  
+It appears that there is some linear relationship between TV and Sales,
+because the red regression line seems to express the general direction 
+of the relationship between TV and Sales.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\textwidth]{scatterplot-tv-sales.png}
+\caption{\label{fig:plot}Scatterplot with regression line.}
+\end{figure}
+
+\section{Conclusion}
+
+The Advertising data had three predictors: TV, newspaper, and radio.  
+Here we only looked at TV.  If we perform multiple regression including
+all three predictors, we could get a different result for the regression
+coefficient for TV.  In this simple linear regression at least, the results
+we got seem to tell us that when we spend more money on TV advertising,
+we can expect to see a mild growth in Sales.
+
+
+\end{document}
