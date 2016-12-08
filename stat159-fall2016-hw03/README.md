@@ -3,10 +3,10 @@
 # Multiple Regression Analysis (HW3)
 The main purpose of this project is to perform multiple linear regression with three predictors (TV, Radio, Newspaper) and one response/target variable(Sales)
 
-How to reproduce this project\n
-1. use eda-script.R to explore the data\n
-2. use regression-script.R to create regression objects\n
-3. use regression.RData to perform necessary data analysis\n
+How to reproduce this project<br />
+1. use eda-script.R to explore the data<br />
+2. use regression-script.R to create regression objects<br />
+3. use regression.RData to perform necessary data analysis<br />
 
 ##Author: Youngshin Kim
 
