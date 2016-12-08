@@ -5,7 +5,7 @@ date: "December 8, 2016"
 output: pdf_document
 ---
 
-#Abstrac
+#Abstract
 
 The mission for this project is to reproduce results from Section 3.2 (pages 71 to 82), from the book "An Introduction to Statistical Learning" (by James et al).  
 
