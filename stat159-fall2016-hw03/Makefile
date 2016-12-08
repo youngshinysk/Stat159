@@ -1,4 +1,4 @@
-.PHONY: all data 
+.PHONY: all data clean
 
 all: eda regression report.pdf
 
