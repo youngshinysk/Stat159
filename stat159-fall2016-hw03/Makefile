@@ -1,20 +1,22 @@
 .PHONY: all data clean
 
-all: report/report.pdf data/eda-output.txt data/regression.RData
+all: eda regression report.pdf
 
-clean: 
-	rm report/report.pdf
+data/Advertising.csv:
+	curl http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv -o data/Advertising.csv
 
-data: 
-	curl -O http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv
-	mv Advertising.csv data
+reports = report/report
+report.pdf: $(reports).Rmd
+	cd report && Rscript -e "library('knitr'); library('rmarkdown'); render('report.Rmd', 'pdf_document')"
 
-report/report.pdf: report/report.Rmd data/regression.RData 
-	R -e 'library("rmarkdown");library("xtable");rmarkdown::render("report/report.Rmd")'
+tests: 
+	cd code && Rscript test-that.R
 
-data/eda-output.txt: code/eda-script.R
-	RScript code/eda-script.R
+eda: $(code/scripts)/eda-script.R
+	cd code/scripts && Rscript eda-script.R
 
-data/regression.RData: code/regression-script.R
-	RScript code/regression-script.R
+regression: $(code/scripts)/regression-script.R
+	cd code/scripts && Rscript regression-script.R
 
+clean:
+	rm $(reports).pdf

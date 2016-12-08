@@ -1,6 +1,5 @@
-<h1>code</h1>
+#Code
 
-* eda-script.R: R file that reads the main data set, computes summary statistics of TV and Sales and saved to eda-output.txt
-* regression-script.R: R file that reads the main data set, computes the regression object using lm function (saved to .RData file in data directory) and produces the scatterplot with regression line.
-
- 
+Functions directory: contains the functions to calculate various statistics such as rss and tss
+Scripts directory: contains scripts to create regression objects and various plots
+test-that.R: contains scripts to test whether the functions work properly
