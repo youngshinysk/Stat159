@@ -43,7 +43,7 @@ With this equation in mind, we use the lm function in R to find the relevant
 information for our regression.  The syntax for this code is
 lm(Sales ~ TV + Radio + Newspaper, data = advertising) where object 'advertising' is the 
 main data from Advertising.csv.  The basic idea behind this function is 
-that we want to find the intercept and the regression coefficients that
+that we want to find the intercept and the regression coefficents that
 minize the residual sum of squares.
 
 #Results
